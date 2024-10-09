@@ -2813,3 +2813,546 @@ Processing by Rails::PwaController#manifest as JSON
 Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2024-10-08 21:25:01 -0300
+  
+ActiveRecord::ConnectionNotEstablished (Access denied for user 'root'@'localhost'):
+
+Causes:
+Mysql2::Error (Access denied for user 'root'@'localhost')
+  
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:35:in `rescue in new_client'
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:24:in `new_client'
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:145:in `connect'
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:154:in `block in reconnect'
+activesupport (7.2.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:151:in `reconnect'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:662:in `block in reconnect!'
+activesupport (7.2.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:661:in `reconnect!'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:763:in `block in verify!'
+activesupport (7.2.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:754:in `verify!'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:771:in `connect!'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:977:in `block in with_raw_connection'
+activesupport (7.2.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:976:in `with_raw_connection'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:693:in `quote_string'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract/quoting.rb:76:in `quote'
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql/schema_statements.rb:255:in `quoted_scope'
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql/schema_statements.rb:237:in `data_source_sql'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in `table_exists?'
+activerecord (7.2.1) lib/active_record/schema_migration.rb:54:in `block in create_table'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:395:in `with_connection'
+activerecord (7.2.1) lib/active_record/schema_migration.rb:53:in `create_table'
+activerecord (7.2.1) lib/active_record/migration.rb:1434:in `initialize'
+activerecord (7.2.1) lib/active_record/migration.rb:1282:in `new'
+activerecord (7.2.1) lib/active_record/migration.rb:1282:in `open'
+activerecord (7.2.1) lib/active_record/migration.rb:776:in `block (2 levels) in pending_migrations'
+activerecord (7.2.1) lib/active_record/migration/pending_migration_connection.rb:8:in `with_temporary_pool'
+activerecord (7.2.1) lib/active_record/migration.rb:775:in `block in pending_migrations'
+activerecord (7.2.1) lib/active_record/migration.rb:774:in `each'
+activerecord (7.2.1) lib/active_record/migration.rb:774:in `pending_migrations'
+activerecord (7.2.1) lib/active_record/migration.rb:753:in `check_pending_migrations'
+activerecord (7.2.1) lib/active_record/migration.rb:663:in `block (2 levels) in call'
+activesupport (7.2.1) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.2.1) lib/active_record/migration.rb:668:in `block in call'
+activerecord (7.2.1) lib/active_record/migration.rb:660:in `synchronize'
+activerecord (7.2.1) lib/active_record/migration.rb:660:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (7.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (7.2.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (7.2.1) lib/rails/rack/logger.rb:29:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/request_id.rb:33:in `call'
+rack (3.1.7) lib/rack/method_override.rb:28:in `call'
+rack (3.1.7) lib/rack/runtime.rb:24:in `call'
+activesupport (7.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.7) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (7.2.1) lib/rails/engine.rb:535:in `call'
+puma (6.4.3) lib/puma/configuration.rb:272:in `call'
+puma (6.4.3) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.3) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.3) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.3) lib/puma/server.rb:464:in `process_client'
+puma (6.4.3) lib/puma/server.rb:245:in `block in run'
+puma (6.4.3) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2024-10-08 21:25:02 -0300
+  
+ActiveRecord::ConnectionNotEstablished (Access denied for user 'root'@'localhost'):
+
+Causes:
+Mysql2::Error (Access denied for user 'root'@'localhost')
+  
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:35:in `rescue in new_client'
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:24:in `new_client'
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:145:in `connect'
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:154:in `block in reconnect'
+activesupport (7.2.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:151:in `reconnect'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:662:in `block in reconnect!'
+activesupport (7.2.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:661:in `reconnect!'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:763:in `block in verify!'
+activesupport (7.2.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:754:in `verify!'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:771:in `connect!'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:977:in `block in with_raw_connection'
+activesupport (7.2.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:976:in `with_raw_connection'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:693:in `quote_string'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract/quoting.rb:76:in `quote'
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql/schema_statements.rb:255:in `quoted_scope'
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql/schema_statements.rb:237:in `data_source_sql'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in `table_exists?'
+activerecord (7.2.1) lib/active_record/schema_migration.rb:54:in `block in create_table'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:395:in `with_connection'
+activerecord (7.2.1) lib/active_record/schema_migration.rb:53:in `create_table'
+activerecord (7.2.1) lib/active_record/migration.rb:1434:in `initialize'
+activerecord (7.2.1) lib/active_record/migration.rb:1282:in `new'
+activerecord (7.2.1) lib/active_record/migration.rb:1282:in `open'
+activerecord (7.2.1) lib/active_record/migration.rb:776:in `block (2 levels) in pending_migrations'
+activerecord (7.2.1) lib/active_record/migration/pending_migration_connection.rb:8:in `with_temporary_pool'
+activerecord (7.2.1) lib/active_record/migration.rb:775:in `block in pending_migrations'
+activerecord (7.2.1) lib/active_record/migration.rb:774:in `each'
+activerecord (7.2.1) lib/active_record/migration.rb:774:in `pending_migrations'
+activerecord (7.2.1) lib/active_record/migration.rb:753:in `check_pending_migrations'
+activerecord (7.2.1) lib/active_record/migration.rb:663:in `block (2 levels) in call'
+activesupport (7.2.1) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.2.1) lib/active_record/migration.rb:668:in `block in call'
+activerecord (7.2.1) lib/active_record/migration.rb:660:in `synchronize'
+activerecord (7.2.1) lib/active_record/migration.rb:660:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (7.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (7.2.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (7.2.1) lib/rails/rack/logger.rb:29:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/request_id.rb:33:in `call'
+rack (3.1.7) lib/rack/method_override.rb:28:in `call'
+rack (3.1.7) lib/rack/runtime.rb:24:in `call'
+activesupport (7.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.7) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (7.2.1) lib/rails/engine.rb:535:in `call'
+puma (6.4.3) lib/puma/configuration.rb:272:in `call'
+puma (6.4.3) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.3) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.3) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.3) lib/puma/server.rb:464:in `process_client'
+puma (6.4.3) lib/puma/server.rb:245:in `block in run'
+puma (6.4.3) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2024-10-08 21:28:04 -0300
+  
+ActiveRecord::NoDatabaseError (We could not find your database: g_prod_development. Available database configurations can be found in config/database.yml.
+
+To resolve this error:
+
+- Did you not create the database, or did you delete it? To create the database, run:
+
+    bin/rails db:create
+
+- Has the database name changed? Verify that config/database.yml contains the correct database name.
+):
+
+Causes:
+Mysql2::Error (Unknown database 'g_prod_development')
+  
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:29:in `rescue in new_client'
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:24:in `new_client'
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:145:in `connect'
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:154:in `block in reconnect'
+activesupport (7.2.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:151:in `reconnect'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:662:in `block in reconnect!'
+activesupport (7.2.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:661:in `reconnect!'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:763:in `block in verify!'
+activesupport (7.2.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:754:in `verify!'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:771:in `connect!'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:977:in `block in with_raw_connection'
+activesupport (7.2.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:976:in `with_raw_connection'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:693:in `quote_string'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract/quoting.rb:76:in `quote'
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql/schema_statements.rb:255:in `quoted_scope'
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql/schema_statements.rb:237:in `data_source_sql'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in `table_exists?'
+activerecord (7.2.1) lib/active_record/schema_migration.rb:54:in `block in create_table'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:395:in `with_connection'
+activerecord (7.2.1) lib/active_record/schema_migration.rb:53:in `create_table'
+activerecord (7.2.1) lib/active_record/migration.rb:1434:in `initialize'
+activerecord (7.2.1) lib/active_record/migration.rb:1282:in `new'
+activerecord (7.2.1) lib/active_record/migration.rb:1282:in `open'
+activerecord (7.2.1) lib/active_record/migration.rb:776:in `block (2 levels) in pending_migrations'
+activerecord (7.2.1) lib/active_record/migration/pending_migration_connection.rb:8:in `with_temporary_pool'
+activerecord (7.2.1) lib/active_record/migration.rb:775:in `block in pending_migrations'
+activerecord (7.2.1) lib/active_record/migration.rb:774:in `each'
+activerecord (7.2.1) lib/active_record/migration.rb:774:in `pending_migrations'
+activerecord (7.2.1) lib/active_record/migration.rb:753:in `check_pending_migrations'
+activerecord (7.2.1) lib/active_record/migration.rb:663:in `block (2 levels) in call'
+activesupport (7.2.1) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.2.1) lib/active_record/migration.rb:668:in `block in call'
+activerecord (7.2.1) lib/active_record/migration.rb:660:in `synchronize'
+activerecord (7.2.1) lib/active_record/migration.rb:660:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (7.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (7.2.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (7.2.1) lib/rails/rack/logger.rb:29:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/request_id.rb:33:in `call'
+rack (3.1.7) lib/rack/method_override.rb:28:in `call'
+rack (3.1.7) lib/rack/runtime.rb:24:in `call'
+activesupport (7.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.7) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (7.2.1) lib/rails/engine.rb:535:in `call'
+puma (6.4.3) lib/puma/configuration.rb:272:in `call'
+puma (6.4.3) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.3) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.3) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.3) lib/puma/server.rb:464:in `process_client'
+puma (6.4.3) lib/puma/server.rb:245:in `block in run'
+puma (6.4.3) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2024-10-08 21:28:04 -0300
+  
+ActiveRecord::NoDatabaseError (We could not find your database: g_prod_development. Available database configurations can be found in config/database.yml.
+
+To resolve this error:
+
+- Did you not create the database, or did you delete it? To create the database, run:
+
+    bin/rails db:create
+
+- Has the database name changed? Verify that config/database.yml contains the correct database name.
+):
+
+Causes:
+Mysql2::Error (Unknown database 'g_prod_development')
+  
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:29:in `rescue in new_client'
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:24:in `new_client'
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:145:in `connect'
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:154:in `block in reconnect'
+activesupport (7.2.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:151:in `reconnect'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:662:in `block in reconnect!'
+activesupport (7.2.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:661:in `reconnect!'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:763:in `block in verify!'
+activesupport (7.2.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:754:in `verify!'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:771:in `connect!'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:977:in `block in with_raw_connection'
+activesupport (7.2.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:976:in `with_raw_connection'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:693:in `quote_string'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract/quoting.rb:76:in `quote'
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql/schema_statements.rb:255:in `quoted_scope'
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql/schema_statements.rb:237:in `data_source_sql'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in `table_exists?'
+activerecord (7.2.1) lib/active_record/schema_migration.rb:54:in `block in create_table'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:395:in `with_connection'
+activerecord (7.2.1) lib/active_record/schema_migration.rb:53:in `create_table'
+activerecord (7.2.1) lib/active_record/migration.rb:1434:in `initialize'
+activerecord (7.2.1) lib/active_record/migration.rb:1282:in `new'
+activerecord (7.2.1) lib/active_record/migration.rb:1282:in `open'
+activerecord (7.2.1) lib/active_record/migration.rb:776:in `block (2 levels) in pending_migrations'
+activerecord (7.2.1) lib/active_record/migration/pending_migration_connection.rb:8:in `with_temporary_pool'
+activerecord (7.2.1) lib/active_record/migration.rb:775:in `block in pending_migrations'
+activerecord (7.2.1) lib/active_record/migration.rb:774:in `each'
+activerecord (7.2.1) lib/active_record/migration.rb:774:in `pending_migrations'
+activerecord (7.2.1) lib/active_record/migration.rb:753:in `check_pending_migrations'
+activerecord (7.2.1) lib/active_record/migration.rb:663:in `block (2 levels) in call'
+activesupport (7.2.1) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.2.1) lib/active_record/migration.rb:668:in `block in call'
+activerecord (7.2.1) lib/active_record/migration.rb:660:in `synchronize'
+activerecord (7.2.1) lib/active_record/migration.rb:660:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (7.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (7.2.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (7.2.1) lib/rails/rack/logger.rb:29:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/request_id.rb:33:in `call'
+rack (3.1.7) lib/rack/method_override.rb:28:in `call'
+rack (3.1.7) lib/rack/runtime.rb:24:in `call'
+activesupport (7.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.7) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (7.2.1) lib/rails/engine.rb:535:in `call'
+puma (6.4.3) lib/puma/configuration.rb:272:in `call'
+puma (6.4.3) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.3) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.3) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.3) lib/puma/server.rb:464:in `process_client'
+puma (6.4.3) lib/puma/server.rb:245:in `block in run'
+puma (6.4.3) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE DATABASE `g_prod_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE DATABASE `g_prod_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (13.9ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (17.2ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('3769569895488642105', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (3.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.8ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2024-10-09 00:28:28.218258', '2024-10-09 00:28:28.218261')[0m
+Migrating to CreateProdutos (20241007163001)
+  [1m[35m (15.7ms)[0m  [1m[35mCREATE TABLE `produtos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `nome` varchar(255), `descricao` text, `preco` decimal, `quantidade` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20241007163001')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('3769569895488642105')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 127.0.0.1 at 2024-10-08 21:28:40 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.9ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos`[0m
+  ↳ app/views/produtos/index.html.erb:26
+  Rendered produtos/index.html.erb within layouts/application (Duration: 261.0ms | GC: 95.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 272.4ms | GC: 95.2ms)
+Completed 200 OK in 327ms (Views: 273.5ms | ActiveRecord: 1.0ms (1 query, 0 cached) | GC: 109.4ms)
+
+
+Started GET "/manifest.json" for 127.0.0.1 at 2024-10-08 21:28:41 -0300
+Processing by Rails::PwaController#manifest as JSON
+  Rendering pwa/manifest.json.erb
+  Rendered pwa/manifest.json.erb (Duration: 0.3ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/produtos/new" for 127.0.0.1 at 2024-10-08 21:28:53 -0300
+Processing by ProdutosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/new.html.erb within layouts/application (Duration: 26.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 29.5ms | GC: 0.0ms)
+Completed 200 OK in 56ms (Views: 30.3ms | ActiveRecord: 6.6ms (0 queries, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/produtos/new" for 127.0.0.1 at 2024-10-08 21:28:54 -0300
+Processing by ProdutosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/new.html.erb within layouts/application (Duration: 9.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | GC: 0.0ms)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 9.5ms)
+
+
+Started GET "/produtos" for 127.0.0.1 at 2024-10-08 21:28:56 -0300
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.5ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos`[0m
+  ↳ app/views/produtos/index.html.erb:26
+  Rendered produtos/index.html.erb within layouts/application (Duration: 7.8ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | GC: 0.4ms)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/produtos" for 127.0.0.1 at 2024-10-08 21:28:57 -0300
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.6ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos`[0m
+  ↳ app/views/produtos/index.html.erb:26
+  Rendered produtos/index.html.erb within layouts/application (Duration: 6.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | GC: 0.1ms)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/produtos" for 127.0.0.1 at 2024-10-08 21:29:31 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  Rendered produtos/index.html.erb within layouts/application (Duration: 60.8ms | GC: 21.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 61.1ms | GC: 21.0ms)
+Completed 500 Internal Server Error in 82ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 21.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'favicon.ico'
+Checked in these paths: 
+  /home/fajardo/Documents/Code/g-prod/app/assets/config
+  /home/fajardo/Documents/Code/g-prod/app/assets/images
+  /home/fajardo/Documents/Code/g-prod/app/assets/stylesheets
+  /home/fajardo/.asdf/installs/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/stimulus-rails-1.3.4/app/assets/javascripts
+  /home/fajardo/.asdf/installs/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/turbo-rails-2.0.10/app/assets/javascripts
+  /home/fajardo/.asdf/installs/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1/app/assets/javascripts
+  /home/fajardo/.asdf/installs/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1/app/assets/stylesheets
+  /home/fajardo/.asdf/installs/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/actioncable-7.2.1/app/assets/javascripts
+  /home/fajardo/.asdf/installs/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/activestorage-7.2.1/app/assets/javascripts
+  /home/fajardo/.asdf/installs/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/actionview-7.2.1/app/assets/javascripts
+  /home/fajardo/Documents/Code/g-prod/app/javascript
+  /home/fajardo/Documents/Code/g-prod/vendor/javascript):
+
+Causes:
+Sprockets::FileNotFound (couldn't find file 'favicon.ico'
+Checked in these paths: 
+  /home/fajardo/Documents/Code/g-prod/app/assets/config
+  /home/fajardo/Documents/Code/g-prod/app/assets/images
+  /home/fajardo/Documents/Code/g-prod/app/assets/stylesheets
+  /home/fajardo/.asdf/installs/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/stimulus-rails-1.3.4/app/assets/javascripts
+  /home/fajardo/.asdf/installs/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/turbo-rails-2.0.10/app/assets/javascripts
+  /home/fajardo/.asdf/installs/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1/app/assets/javascripts
+  /home/fajardo/.asdf/installs/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/actiontext-7.2.1/app/assets/stylesheets
+  /home/fajardo/.asdf/installs/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/actioncable-7.2.1/app/assets/javascripts
+  /home/fajardo/.asdf/installs/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/activestorage-7.2.1/app/assets/javascripts
+  /home/fajardo/.asdf/installs/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/actionview-7.2.1/app/assets/javascripts
+  /home/fajardo/Documents/Code/g-prod/app/javascript
+  /home/fajardo/Documents/Code/g-prod/vendor/javascript)
+  
+sprockets (4.2.1) lib/sprockets/resolve.rb:62:in `resolve!'
+sprockets (4.2.1) lib/sprockets/directive_processor.rb:427:in `resolve'
+sprockets (4.2.1) lib/sprockets/directive_processor.rb:327:in `process_link_directive'
+sprockets (4.2.1) lib/sprockets/directive_processor.rb:189:in `block in process_directives'
+sprockets (4.2.1) lib/sprockets/directive_processor.rb:187:in `each'
+sprockets (4.2.1) lib/sprockets/directive_processor.rb:187:in `process_directives'
+sprockets (4.2.1) lib/sprockets/directive_processor.rb:84:in `_call'
+sprockets (4.2.1) lib/sprockets/directive_processor.rb:65:in `call'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:84:in `call_processor'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:66:in `block in call_processors'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:65:in `reverse_each'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:65:in `call_processors'
+sprockets (4.2.1) lib/sprockets/loader.rb:184:in `load_from_unloaded'
+sprockets (4.2.1) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.2.1) lib/sprockets/loader.rb:339:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.1) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.3.4) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.3.4) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.3.4) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.1) lib/sprockets/bundle.rb:27:in `call'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:84:in `call_processor'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:66:in `block in call_processors'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:65:in `reverse_each'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:65:in `call_processors'
+sprockets (4.2.1) lib/sprockets/loader.rb:184:in `load_from_unloaded'
+sprockets (4.2.1) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.2.1) lib/sprockets/loader.rb:339:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.1) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.3.4) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.3.4) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.3.4) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.1) lib/sprockets/base.rb:81:in `find_asset'
+sprockets (4.2.1) lib/sprockets/base.rb:88:in `find_all_linked_assets'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `each'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `to_a'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `block (2 levels) in find'
+concurrent-ruby (1.3.4) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+concurrent-ruby (1.3.4) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `block in synchronize'
+concurrent-ruby (1.3.4) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.3.4) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.3.4) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:22:in `execute'
+concurrent-ruby (1.3.4) lib/concurrent-ruby/concurrent/promise.rb:564:in `block in realize'
+concurrent-ruby (1.3.4) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:359:in `run_task'
+concurrent-ruby (1.3.4) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:350:in `block (3 levels) in create_worker'
+<internal:kernel>:187:in `loop'
+concurrent-ruby (1.3.4) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:341:in `block (2 levels) in create_worker'
+concurrent-ruby (1.3.4) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:340:in `catch'
+concurrent-ruby (1.3.4) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:340:in `block in create_worker'
+Started GET "/favicon.ico" for 127.0.0.1 at 2024-10-08 21:29:31 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/produtos" for 127.0.0.1 at 2024-10-08 21:31:50 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (2.1ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos`[0m
+  ↳ app/views/produtos/index.html.erb:26
+  Rendered produtos/index.html.erb within layouts/application (Duration: 96.9ms | GC: 36.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 141.4ms | GC: 62.9ms)
+Completed 200 OK in 163ms (Views: 141.9ms | ActiveRecord: 2.3ms (1 query, 0 cached) | GC: 62.9ms)
+
+
+Started GET "/manifest.json" for 127.0.0.1 at 2024-10-08 21:31:50 -0300
+Processing by Rails::PwaController#manifest as JSON
+  Rendering pwa/manifest.json.erb
+  Rendered pwa/manifest.json.erb (Duration: 0.5ms | GC: 0.1ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/produtos/new" for 127.0.0.1 at 2024-10-08 21:31:54 -0300
+Processing by ProdutosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/new.html.erb within layouts/application (Duration: 14.1ms | GC: 0.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | GC: 0.7ms)
+Completed 200 OK in 41ms (Views: 16.8ms | ActiveRecord: 6.5ms (0 queries, 0 cached) | GC: 1.2ms)
+
+
+Started GET "/produtos" for 127.0.0.1 at 2024-10-08 21:31:56 -0300
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.3ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos`[0m
+  ↳ app/views/produtos/index.html.erb:26
+  Rendered produtos/index.html.erb within layouts/application (Duration: 3.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
