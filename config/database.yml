@@ -13,8 +13,8 @@ default: &default
   adapter: mysql2
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  #username: root
-  #password: 05092004
+  username: rails_user
+  password: 05092004
   host: 10.200.125.150
   port: 3306
   socket: /var/run/mysqld/mysqld.sock
@@ -52,9 +52,6 @@ test:
 #
 production:
   <<: *default
-  #database: g_prod_production
-  #username: g_prod
-  #password: <%= ENV["G_PROD_DATABASE_PASSWORD"] %>
-  database: rails_app_production
-  username: rails_user
-  password: 05092004
+  database: g_prod_production
+  username: g_prod
+  password: <%= ENV["G_PROD_DATABASE_PASSWORD"] %>
