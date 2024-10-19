@@ -15,7 +15,7 @@ default: &default
   pool: 5  #<%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: rails_user
   password: 05092004
-  host: 10.68.230.82
+  host: db.g-prod.com
   port: 3306
   socket: /var/run/mysqld/mysqld.sock
 
