@@ -1,0 +1,95 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            bd:20:a4:16:f3:79:21:ba:59:6a:78:44:59:ce:6f:cb
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=US, ST=California, L=San Francisco, O=CAMADA SA, OU=CAMADA SA, CN=camada.net/emailAddress=me@camada.net
+        Validity
+            Not Before: Oct 20 15:24:39 2024 GMT
+            Not After : Jan 23 15:24:39 2027 GMT
+        Subject: C=BR, ST=PR, L=Guarapuava, O=g-prod, OU=g-prod, CN=*.g-prod.com/emailAddress=me@g-prod.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:a5:df:bc:05:4b:41:98:0e:0a:2d:51:2e:d2:cb:
+                    8b:3c:e9:75:8b:2d:15:1b:69:63:a9:8d:48:e1:c2:
+                    46:0c:8f:b5:97:a2:40:15:ea:83:18:81:5b:06:38:
+                    33:47:b1:4f:51:c4:91:20:2b:6f:66:49:04:8e:35:
+                    11:72:ab:b0:c7:7a:fe:58:05:42:a4:41:c7:d5:d6:
+                    c8:fc:e7:1a:2b:74:22:d6:83:63:05:30:f6:76:a4:
+                    fb:be:d7:e7:0e:37:63:e7:07:0b:33:37:2e:e3:d3:
+                    b0:64:2a:f0:1f:bc:8b:97:55:95:92:f3:13:42:ef:
+                    66:12:35:7a:44:2d:28:84:13:96:70:61:0a:4c:21:
+                    89:17:ff:33:75:00:55:7c:f2:28:91:b0:87:15:2d:
+                    3d:3d:79:59:bc:68:7c:77:8a:91:c4:a8:86:11:fe:
+                    88:3e:09:ec:1b:b5:3c:b1:a9:f0:3f:86:63:a0:f4:
+                    27:ba:84:33:43:b8:60:f2:b2:f1:d9:c7:5c:c1:2c:
+                    a2:9e:19:f0:b8:58:7d:be:ad:4c:49:19:40:21:bc:
+                    a6:f1:01:98:9f:fd:08:33:73:80:73:1b:8c:97:2b:
+                    35:31:d5:b6:38:2a:8a:4b:1d:1c:fd:e3:fd:46:06:
+                    92:f2:ed:ea:ca:c0:a6:e5:d2:da:aa:de:b6:fa:25:
+                    6a:ad
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            X509v3 Subject Key Identifier: 
+                8C:C4:B5:07:92:5D:8E:EA:32:EA:29:8A:08:B6:C1:EC:5A:7F:A8:4D
+            X509v3 Authority Key Identifier: 
+                keyid:84:D7:0B:5B:F1:86:59:4C:C0:85:49:BB:FE:89:FA:05:C5:92:E2:90
+                DirName:/C=US/ST=California/L=San Francisco/O=CAMADA SA/OU=CAMADA SA/CN=camada.net/emailAddress=me@camada.net
+                serial:68:19:CF:FF:02:BE:E6:DA:08:24:08:C0:FC:DE:2B:D0:6A:59:C5:8E
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication
+            X509v3 Key Usage: 
+                Digital Signature, Key Encipherment
+            X509v3 Subject Alternative Name: 
+                DNS:*.g-prod.com
+    Signature Algorithm: sha256WithRSAEncryption
+    Signature Value:
+        99:ce:e5:60:c6:39:bd:ab:ea:ce:6e:1f:0b:1c:49:44:62:08:
+        12:31:69:36:75:26:98:1e:ca:13:47:04:dc:4c:fd:da:79:4d:
+        cf:c7:c5:45:7c:fb:24:5d:fa:94:9d:0e:97:78:ab:0b:29:b4:
+        73:36:25:47:e0:b2:4f:13:b9:7c:f6:d7:d6:a3:ac:11:42:5c:
+        25:bd:ff:c7:76:4d:ea:1b:2e:fa:58:4c:15:da:76:52:1b:ff:
+        17:57:89:d0:97:b5:5f:b8:a1:fb:6c:22:9c:4c:5e:18:57:b7:
+        20:94:02:ad:8c:32:58:50:31:97:c9:19:b4:d7:c2:22:9c:23:
+        64:4d:b8:c5:5c:ab:a1:ef:47:6b:f3:74:d9:50:05:fe:39:87:
+        53:e4:01:99:71:de:9a:af:f7:78:56:c5:ef:87:56:3d:37:ee:
+        f5:3f:e2:8a:f2:8a:7a:64:3e:3f:aa:e4:f1:6a:93:e1:25:32:
+        33:8a:5d:73:45:0c:ca:4a:91:42:44:d7:69:a8:15:48:8e:0c:
+        a7:fa:ee:d0:8f:b3:c8:e6:7f:94:29:64:77:2b:a5:c2:79:b3:
+        2e:23:35:ff:b6:3b:7c:ea:b7:03:e1:46:34:7f:32:e6:bc:ee:
+        c6:23:16:c7:61:26:c6:2f:29:41:bb:fb:ca:d9:e6:81:91:5f:
+        34:3c:a0:42
+-----BEGIN CERTIFICATE-----
+MIIE6zCCA9OgAwIBAgIRAL0gpBbzeSG6WWp4RFnOb8swDQYJKoZIhvcNAQELBQAw
+gZUxCzAJBgNVBAYTAlVTMRMwEQYDVQQIDApDYWxpZm9ybmlhMRYwFAYDVQQHDA1T
+YW4gRnJhbmNpc2NvMRIwEAYDVQQKDAlDQU1BREEgU0ExEjAQBgNVBAsMCUNBTUFE
+QSBTQTETMBEGA1UEAwwKY2FtYWRhLm5ldDEcMBoGCSqGSIb3DQEJARYNbWVAY2Ft
+YWRhLm5ldDAeFw0yNDEwMjAxNTI0MzlaFw0yNzAxMjMxNTI0MzlaMIGGMQswCQYD
+VQQGEwJCUjELMAkGA1UECAwCUFIxEzARBgNVBAcMCkd1YXJhcHVhdmExDzANBgNV
+BAoMBmctcHJvZDEPMA0GA1UECwwGZy1wcm9kMRUwEwYDVQQDDAwqLmctcHJvZC5j
+b20xHDAaBgkqhkiG9w0BCQEWDW1lQGctcHJvZC5jb20wggEiMA0GCSqGSIb3DQEB
+AQUAA4IBDwAwggEKAoIBAQCl37wFS0GYDgotUS7Sy4s86XWLLRUbaWOpjUjhwkYM
+j7WXokAV6oMYgVsGODNHsU9RxJEgK29mSQSONRFyq7DHev5YBUKkQcfV1sj85xor
+dCLWg2MFMPZ2pPu+1+cON2PnBwszNy7j07BkKvAfvIuXVZWS8xNC72YSNXpELSiE
+E5ZwYQpMIYkX/zN1AFV88iiRsIcVLT09eVm8aHx3ipHEqIYR/og+CewbtTyxqfA/
+hmOg9Ce6hDNDuGDysvHZx1zBLKKeGfC4WH2+rUxJGUAhvKbxAZif/Qgzc4BzG4yX
+KzUx1bY4KopLHRz94/1GBpLy7erKwKbl0tqq3rb6JWqtAgMBAAGjggFBMIIBPTAJ
+BgNVHRMEAjAAMB0GA1UdDgQWBBSMxLUHkl2O6jLqKYoItsHsWn+oTTCB1QYDVR0j
+BIHNMIHKgBSE1wtb8YZZTMCFSbv+ifoFxZLikKGBm6SBmDCBlTELMAkGA1UEBhMC
+VVMxEzARBgNVBAgMCkNhbGlmb3JuaWExFjAUBgNVBAcMDVNhbiBGcmFuY2lzY28x
+EjAQBgNVBAoMCUNBTUFEQSBTQTESMBAGA1UECwwJQ0FNQURBIFNBMRMwEQYDVQQD
+DApjYW1hZGEubmV0MRwwGgYJKoZIhvcNAQkBFg1tZUBjYW1hZGEubmV0ghRoGc//
+Ar7m2ggkCMD83ivQalnFjjATBgNVHSUEDDAKBggrBgEFBQcDATALBgNVHQ8EBAMC
+BaAwFwYDVR0RBBAwDoIMKi5nLXByb2QuY29tMA0GCSqGSIb3DQEBCwUAA4IBAQCZ
+zuVgxjm9q+rObh8LHElEYggSMWk2dSaYHsoTRwTcTP3aeU3Px8VFfPskXfqUnQ6X
+eKsLKbRzNiVH4LJPE7l89tfWo6wRQlwlvf/Hdk3qGy76WEwV2nZSG/8XV4nQl7Vf
+uKH7bCKcTF4YV7cglAKtjDJYUDGXyRm018IinCNkTbjFXKuh70dr83TZUAX+OYdT
+5AGZcd6ar/d4VsXvh1Y9N+71P+KK8op6ZD4/quTxapPhJTIzil1zRQzKSpFCRNdp
+qBVIjgyn+u7Qj7PI5n+UKWR3K6XCebMuIzX/tjt86rcD4UY0fzLmvO7GIxbHYSbG
+LylBu/vK2eaBkV80PKBC
+-----END CERTIFICATE-----
