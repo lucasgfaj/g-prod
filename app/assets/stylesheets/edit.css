@@ -1,0 +1,89 @@
+/* Product Container */
+.product-container {
+    background-color: white; /* Fundo branco para a área do produto */
+    border: 1px solid #ddd; /* Borda suave ao redor da área do produto */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 20px; /* Preenchimento interno */
+    margin: 20px 0; /* Margem superior e inferior */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
+}
+
+/* Field Styles */
+.field {
+    margin-bottom: 15px; /* Espaçamento entre os campos */
+}
+
+.field label {
+    display: block; /* Cada rótulo em uma nova linha */
+    font-weight: bold; /* Negrito para rótulos */
+}
+
+/* Actions */
+.actions {
+    margin-top: 20px; /* Espaço acima das ações */
+}
+
+/* Product Actions */
+.product-actions {
+    margin-top: 20px; /* Espaço acima das ações do produto */
+    display: flex; /* Flexbox para alinhar os botões em linha */
+    gap: 10px; /* Espaço entre os botões */
+}
+
+/* Estilos para Botões */
+.btn-show-edit,
+.btn-back-edit,
+.btn-delete-edit,
+.btn-save-edit {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: white; /* Cor do texto */
+    padding: 10px 15px; /* Preenchimento */
+    border-radius: 4px; /* Bordas arredondadas */
+    transition: background-color 0.3s; /* Transição suave ao mudar a cor de fundo */
+    font-size: 16px; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* Deixa o texto mais negrito */
+}
+
+.btn-save-edit {
+    background-color: #4CAF50; /* Verde para salvar */
+}
+
+.btn-save-edit:hover {
+    background-color: #388E3C; /* Cor mais escura ao passar o mouse */
+}
+
+.btn-show-edit {
+    background-color: #2196F3; /* Azul para mostrar */
+}
+
+.btn-show-edit:hover {
+    background-color: #1976D2; /* Cor mais escura ao passar o mouse */
+}
+
+.btn-back-edit {
+    background-color: #FFA500; /* Laranja para voltar */
+}
+
+.btn-back-edit:hover {
+    background-color: #e59400; /* Cor mais escura ao passar o mouse */
+}
+
+.btn-delete-edit {
+    background-color: #f44336; /* Vermelho para deletar */
+}
+
+.btn-delete-edit:hover {
+    background-color: #d32f2f; /* Cor mais escura ao passar o mouse */
+}
+
+/* Adiciona estilo extra ao botão Salvar */
+.btn-save-edit {
+    background-color: #4CAF50; /* Verde para salvar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    border: none; /* Remove a borda padrão */
+}
+
+.btn-save-edit:hover {
+    background-color: #388E3C; /* Cor mais escura ao passar o mouse */
+    transform: translateY(-2px); /* Leve elevação ao passar o mouse */
+}

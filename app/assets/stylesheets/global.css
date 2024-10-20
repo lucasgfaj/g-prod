@@ -1,0 +1,58 @@
+/* Global Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Remove a barra de rolagem horizontal */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9; /* Cor de fundo leve para o corpo */
+}
+
+/* Header */
+header {
+    background-color: #8B4513; /* Marrom mais escuro para o header */
+    padding: 10px; /* Diminuindo o padding do header */
+    margin: 0; /* Remove margem extra */
+}
+
+/* Nav Styles */
+nav {
+    text-align: left; /* Alinha o menu à esquerda */
+}
+
+nav ul {
+    list-style-type: none; /* Remove a marcação da lista */
+    padding: 0; /* Remove o preenchimento */
+    margin: 0; /* Remove a margem */
+}
+
+nav ul li {
+    display: inline; /* Exibe os itens do menu na mesma linha */
+    margin-right: 30px; /* Espaçamento entre os itens do menu */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: white; /* Cor dos links */
+    font-weight: bold; /* Deixa os links em negrito */
+    transition: color 0.3s; /* Adiciona uma transição suave na cor */
+}
+
+nav ul li a:hover {
+    color: #d7b58e; /* Cor quando o mouse passa sobre o link */
+}
+
+/* Footer */
+footer {
+    background-color: #8B4513; /* Marrom mais escuro para o footer */
+    color: white;
+    padding: 10px; /* Diminuindo o padding do footer */
+    text-align: center; /* Mantém o texto centralizado */
+    margin-top: auto;
+    width: 100%;
+    position: relative; /* Certifica que o footer fica no lugar certo */
+}

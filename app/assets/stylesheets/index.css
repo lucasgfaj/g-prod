@@ -1,0 +1,65 @@
+/* Index Styles */
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Título */
+h1 {
+  color: #8B4513; /* Cor do título */
+  margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  margin: 0;
+}
+
+/* Estilização dos botões */
+.btn-show,
+.btn-edit,
+.btn-delete {
+  text-decoration: none; /* Remove sublinhado dos links */
+  color: white; /* Cor do texto */
+  padding: 5px 10px; /* Preenchimento */
+  border-radius: 4px; /* Bordas arredondadas */
+}
+
+.btn-show {
+  background-color: #4CAF50; /* Verde para mostrar */
+}
+
+.btn-show:hover {
+  background-color: #45a049; /* Cor mais escura ao passar o mouse */
+}
+
+.btn-edit {
+  background-color: #FFA500; /* Laranja para editar */
+}
+
+.btn-edit:hover {
+  background-color: #e59400; /* Cor mais escura ao passar o mouse */
+}
+
+.btn-delete {
+  background-color: #f44336; /* Vermelho para deletar */
+}
+
+.btn-delete:hover {
+  background-color: #d32f2f; /* Cor mais escura ao passar o mouse */
+}
+
+.header-icon {
+  width: 40px; /* Ajuste o tamanho conforme necessário */
+  height: auto; /* Mantém a proporção */
+  margin-right: 10px; /* Espaço entre o ícone e o texto */
+}

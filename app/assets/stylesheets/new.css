@@ -1,0 +1,68 @@
+/* Main Container Styles */
+main {
+    margin: 20px; /* Margem ao redor do conteúdo principal */
+    font-family: Arial, sans-serif; /* Fonte padrão */
+}
+
+/* Title Styles */
+h1 {
+    color: #333; /* Cor do título */
+}
+
+/* Error Message Styles */
+#error_explanation {
+    background-color: #ffdddd; /* Fundo vermelho claro para erros */
+    border: 1px solid #f44336; /* Borda vermelha */
+    padding: 10px; /* Preenchimento interno */
+    margin-bottom: 20px; /* Espaço abaixo da mensagem de erro */
+}
+
+/* Field Styles */
+.field {
+    margin-bottom: 15px; /* Espaçamento entre os campos */
+}
+
+/* Field Label Styles */
+.field label {
+    display: block; /* Cada rótulo em uma nova linha */
+    font-weight: bold; /* Negrito para rótulos */
+}
+
+/* Button Styles */
+.btn-save {
+    background-color: #4CAF50; /* Verde para salvar */
+    color: white; /* Cor do texto */
+    padding: 10px 15px; /* Preenchimento do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    font-size: 16px; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+    transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
+}
+
+/* Hover Effects for Save Button */
+.btn-save:hover {
+    background-color: #388E3C; /* Cor mais escura ao passar o mouse */
+    transform: translateY(-2px); /* Leve elevação ao passar o mouse */
+}
+
+/* Back Button Styles */
+.btn-back {
+    display: inline-block; /* Exibe como bloco inline */
+    margin-top: 20px; /* Margem acima do botão de voltar */
+    padding: 10px 15px; /* Preenchimento do botão */
+    background-color: #FFA500; /* Laranja para voltar */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    border-radius: 4px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove sublinhado do link */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+/* Hover Effects for Back Button */
+.btn-back:hover {
+    background-color: #e59400; /* Cor mais escura ao passar o mouse */
+}
+    

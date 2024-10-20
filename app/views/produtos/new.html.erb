@@ -3,53 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <%= stylesheet_link_tag "application", media: "all" %> <!--Inclui CSS-->
+    <%= stylesheet_link_tag "application", media: "all" %> <!-- Inclui CSS -->
     <%= javascript_include_tag "application" %>
-    <title>G-Prod</title>
+    <title>Novo Produto - G-Prod</title>
 </head>
 <body>
-<h1>Novo Produto</h1>
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><%= link_to 'Home', root_path %></li>
+                <li><%= link_to 'Mostrar Produtos', produtos_path %></li>
+                <li><%= link_to 'Novo Produto', new_produto_path %></li>
+            </ul>
+        </nav>
+    </header>
 
-<%= form_with(model: @produto, local: true) do |form| %>
-  <% if @produto.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@produto.errors.count, "erro") %> impedem que este produto seja salvo:</h2>
+    <!-- Main Content -->
+    <main>
+        <h1>Novo Produto</h1>
 
-      <ul>
-      <% @produto.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+        <%= form_with(model: @produto, local: true) do |form| %>
+          <% if @produto.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@produto.errors.count, "erro") %> impedem que este produto seja salvo:</h2>
 
-  <div class="field">
-    <%= form.label :nome %>
-    <%= form.text_field :nome %>
-  </div>
+              <ul>
+              <% @produto.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
 
-  <div class="field">
-    <%= form.label :descricao %>
-    <%= form.text_area :descricao %>
-  </div>
+          <div class="field">
+            <%= form.label :nome %>
+            <%= form.text_field :nome %>
+          </div>
 
-  <div class="field">
-    <%= form.label :preco %>
-    <%= form.number_field :preco %>
-  </div>
+          <div class="field">
+            <%= form.label :descricao %>
+            <%= form.text_area :descricao %>
+          </div>
 
-  <div class="field">
-    <%= form.label :quantidade %>
-    <%= form.number_field :quantidade %>
-  </div>
+          <div class="field">
+            <%= form.label :preco %>
+            <%= form.number_field :preco %>
+          </div>
 
-  <div class="actions">
-    <%= form.submit "Salvar" %>
-  </div>
-<% end %>
+          <div class="field">
+            <%= form.label :quantidade %>
+            <%= form.number_field :quantidade %>
+          </div>
 
-<%= link_to 'Voltar', produtos_path %>
+          <div class="actions">
+            <%= form.submit "Salvar", class: "btn-save" %>
+          </div>
+        <% end %>
 
+        <%= link_to 'Voltar', produtos_path, class: "btn-back" %>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 G-Prod. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
-
+  

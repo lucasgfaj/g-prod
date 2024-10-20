@@ -1,12 +1,77 @@
-<% content_for :title, "Editing produto" %>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale: 1.0">
+    <%= stylesheet_link_tag "edit", media: "all" %> <!-- Inclui apenas a folha de estilo relevante -->
+    <%= javascript_include_tag "application" %>
+    <title>Editando <%= @produto.nome %> - G-Prod</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><%= link_to 'Home', root_path %></li>
+                <li><%= link_to 'Mostrar Produtos', produtos_path %></li>
+                <li><%= link_to 'Novo Produto', new_produto_path %></li>
+            </ul>
+        </nav>
+    </header>
 
-<h1>Editing produto</h1>
+    <!-- Edit Product Page Content -->
+    <main>
+        <div class="product-container">
+            <h1>Editando <%= @produto.nome %></h1>
 
-<%= render "form", produto: @produto %>
+            <%= form_with(model: @produto, local: true) do |form| %>
+                <% if @produto.errors.any? %>
+                    <div id="error_explanation">
+                        <h2><%= pluralize(@produto.errors.count, "erro") %> impedem que este produto seja salvo:</h2>
+                        <ul>
+                            <% @produto.errors.full_messages.each do |message| %>
+                                <li><%= message %></li>
+                            <% end %>
+                        </ul>
+                    </div>
+                <% end %>
 
-<br>
+                <div class="field">
+                    <%= form.label :nome %>
+                    <%= form.text_field :nome %>
+                </div>
 
-<div>
-  <%= link_to "Show this produto", @produto %> |
-  <%= link_to "Back to produtos", produtos_path %>
-</div>
+                <div class="field">
+                    <%= form.label :descricao %>
+                    <%= form.text_area :descricao %>
+                </div>
+
+                <div class="field">
+                    <%= form.label :preco %>
+                    <%= form.number_field :preco %>
+                </div>
+
+                <div class="field">
+                    <%= form.label :quantidade %>
+                    <%= form.number_field :quantidade %>
+                </div>
+
+                <div class="actions">
+                    <%= form.submit "Salvar", class: "btn-save-edit" %>
+                </div>
+            <% end %>
+
+            <div class="product-actions">
+                <%= link_to "Mostrar este produto", @produto, class: "btn-show-edit" %>
+                <%= link_to "Voltar para produtos", produtos_path, class: "btn-back-edit" %>
+                <%= button_to "Excluir este produto", @produto, method: :delete, class: "btn-delete-edit" %>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 G-Prod. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

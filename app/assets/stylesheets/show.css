@@ -1,0 +1,50 @@
+/* Product Container */
+.product-container {
+  background-color: white; /* Fundo branco para a área do produto */
+  border: 1px solid #ddd; /* Borda suave ao redor da área do produto */
+  border-radius: 5px; /* Bordas arredondadas */
+  padding: 20px; /* Preenchimento interno */
+  margin: 20px 0; /* Margem superior e inferior */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
+}
+
+/* Product Actions */
+.product-actions {
+  margin-top: 20px; /* Espaço acima das ações do produto */
+  display: flex; /* Flexbox para alinhar os botões em linha */
+  gap: 10px; /* Espaço entre os botões */
+}
+
+.btn-edit-product,
+.btn-back-product,
+.btn-delete-product {
+  text-decoration: none; /* Remove sublinhado dos links */
+  color: white; /* Cor do texto */
+  padding: 10px 15px; /* Preenchimento */
+  border-radius: 4px; /* Bordas arredondadas */
+  transition: background-color 0.3s; /* Transição suave ao mudar a cor de fundo */
+}
+
+.btn-edit-product {
+  background-color: #FFA500; /* Laranja para editar */
+}
+
+.btn-edit-product:hover {
+  background-color: #e59400; /* Cor mais escura ao passar o mouse */
+}
+
+.btn-back-product {
+  background-color: #2196F3; /* Azul para voltar */
+}
+
+.btn-back-product:hover {
+  background-color: #1976D2; /* Cor mais escura ao passar o mouse */
+}
+
+.btn-delete-product {
+  background-color: #f44336; /* Vermelho para deletar */
+}
+
+.btn-delete-product:hover {
+  background-color: #d32f2f; /* Cor mais escura ao passar o mouse */
+}
