@@ -18,7 +18,7 @@ Siga as instruções detalhadas no Notion para configurar as máquinas virtuais 
 
 [**Instruções de Instalação no Notion**](https://www.notion.so/G-Prod-1247901150778088857aef1f16d92aba?pvs=4)
 
-> **Atenção**: Os IPs das VMs e a chave privada mostrados no Notion foram usados exclusivamente para este projeto e não são válidos para qualquer outro uso.
+> **Atenção**: Os IPs das VMs mostrados no Notion foram usados exclusivamente para este projeto e não são válidos para qualquer outro uso.
 
 ## Arquitetura
 
