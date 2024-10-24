@@ -10043,3 +10043,160 @@ Processing by ProdutosController#index as HTML
 Completed 200 OK in 750ms (Views: 619.5ms | ActiveRecord: 57.6ms (1 query, 0 cached) | GC: 70.7ms)
 
 
+  [1m[35m (155847.3ms)[0m  [1m[35mCREATE DATABASE `g_prod_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (5776.8ms)[0m  [1m[35mCREATE DATABASE `g_prod_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (37.6ms)[0m  [1m[35mCREATE DATABASE `g_prod_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (39.3ms)[0m  [1m[35mCREATE DATABASE `g_prod_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (46.5ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (52.7ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT GET_LOCK('3769569895488642105', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (5.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+  [1m[36mActiveRecord::InternalMetadata Create (6.6ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2024-10-24 00:03:23.260726', '2024-10-24 00:03:23.260730')[0m
+Migrating to CreateProdutos (20241007163001)
+  [1m[35m (36.6ms)[0m  [1m[35mCREATE TABLE `produtos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `nome` varchar(255), `descricao` text, `preco` decimal, `quantidade` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (5.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20241007163001')[0m
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('3769569895488642105')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 10.68.230.1 at 2024-10-23 21:29:46 -0300
+Cannot render console from 10.68.230.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (2.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (36.5ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos`[0m
+  ↳ app/views/produtos/index.html.erb:47
+  Rendered produtos/index.html.erb within layouts/application (Duration: 165.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 190.4ms | GC: 0.0ms)
+Completed 200 OK in 257ms (Views: 160.9ms | ActiveRecord: 37.2ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/produtos/new" for 10.68.230.1 at 2024-10-23 21:29:51 -0300
+Cannot render console from 10.68.230.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProdutosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/new.html.erb within layouts/application (Duration: 32.1ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 42.2ms | GC: 0.4ms)
+Completed 200 OK in 111ms (Views: 43.9ms | ActiveRecord: 14.8ms (0 queries, 0 cached) | GC: 0.8ms)
+
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT GET_LOCK('3769569895488642105', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.1ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('3769569895488642105')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 10.68.230.1 at 2024-10-24 00:30:08 -0300
+Cannot render console from 10.68.230.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (2.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (36.3ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos`[0m
+  ↳ app/views/produtos/index.html.erb:47
+  Rendered produtos/index.html.erb within layouts/application (Duration: 122.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 149.2ms | GC: 0.0ms)
+Completed 200 OK in 180ms (Views: 117.8ms | ActiveRecord: 37.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/produtos/new" for 10.68.230.1 at 2024-10-24 00:30:12 -0300
+Cannot render console from 10.68.230.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProdutosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/new.html.erb within layouts/application (Duration: 25.6ms | GC: 1.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 30.9ms | GC: 1.1ms)
+Completed 200 OK in 125ms (Views: 32.9ms | ActiveRecord: 29.7ms (0 queries, 0 cached) | GC: 2.8ms)
+
+
+Started POST "/produtos" for 10.68.230.1 at 2024-10-24 00:30:37 -0300
+Cannot render console from 10.68.230.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProdutosController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "produto"=>{"nome"=>"Notebook", "descricao"=>"I5 de 10th", "preco"=>"1999", "quantidade"=>"32"}, "commit"=>"Salvar"}
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/produtos_controller.rb:27:in `block in create'
+  [1m[36mProduto Create (19.9ms)[0m  [1m[32mINSERT INTO `produtos` (`nome`, `descricao`, `preco`, `quantidade`, `created_at`, `updated_at`) VALUES ('Notebook', 'I5 de 10th', 1999, 32, '2024-10-24 03:30:37.545202', '2024-10-24 03:30:37.545202')[0m
+  ↳ app/controllers/produtos_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (10.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/produtos_controller.rb:27:in `block in create'
+Redirected to https://www.g-prod.com.br/produtos/1
+Completed 302 Found in 63ms (ActiveRecord: 31.7ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/produtos/1" for 10.68.230.1 at 2024-10-24 00:30:37 -0300
+Cannot render console from 10.68.230.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProdutosController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mProduto Load (1.6ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos` WHERE `produtos`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/show.html.erb within layouts/application
+  Rendered produtos/_produto.html.erb (Duration: 2.1ms | GC: 0.0ms)
+  Rendered produtos/show.html.erb within layouts/application (Duration: 24.3ms | GC: 0.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 28.2ms | GC: 0.7ms)
+Completed 200 OK in 53ms (Views: 30.6ms | ActiveRecord: 1.6ms (1 query, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/produtos" for 10.68.230.1 at 2024-10-24 00:30:38 -0300
+Cannot render console from 10.68.230.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (2.4ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos`[0m
+  ↳ app/views/produtos/index.html.erb:47
+  Rendered produtos/index.html.erb within layouts/application (Duration: 23.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 28.5ms | GC: 0.0ms)
+Completed 200 OK in 33ms (Views: 28.3ms | ActiveRecord: 2.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/produtos/1/edit" for 10.68.230.1 at 2024-10-24 00:30:42 -0300
+Cannot render console from 10.68.230.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProdutosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduto Load (2.2ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos` WHERE `produtos`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/edit.html.erb within layouts/application
+  Rendered produtos/edit.html.erb within layouts/application (Duration: 69.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 74.3ms | GC: 0.0ms)
+Completed 200 OK in 93ms (Views: 75.8ms | ActiveRecord: 2.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/produtos" for 10.68.230.1 at 2024-10-24 00:30:47 -0300
+Cannot render console from 10.68.230.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (1.4ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos`[0m
+  ↳ app/views/produtos/index.html.erb:47
+  Rendered produtos/index.html.erb within layouts/application (Duration: 40.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 45.0ms | GC: 0.0ms)
+Completed 200 OK in 53ms (Views: 44.9ms | ActiveRecord: 1.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/produtos/1" for 10.68.230.1 at 2024-10-24 00:30:56 -0300
+Cannot render console from 10.68.230.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProdutosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduto Load (2.2ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos` WHERE `produtos`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/produtos_controller.rb:63:in `set_produto'
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/show.html.erb within layouts/application
+  Rendered produtos/_produto.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered produtos/show.html.erb within layouts/application (Duration: 43.2ms | GC: 26.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 48.5ms | GC: 27.5ms)
+Completed 200 OK in 73ms (Views: 54.0ms | ActiveRecord: 2.1ms (1 query, 0 cached) | GC: 27.5ms)
+
+
+Started GET "/produtos" for 10.68.230.1 at 2024-10-24 00:30:58 -0300
+Cannot render console from 10.68.230.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProdutosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (2.1ms)[0m  [1m[34mSELECT `produtos`.* FROM `produtos`[0m
+  ↳ app/views/produtos/index.html.erb:47
+  Rendered produtos/index.html.erb within layouts/application (Duration: 22.0ms | GC: 0.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 43.8ms | GC: 0.7ms)
+Completed 200 OK in 53ms (Views: 45.7ms | ActiveRecord: 2.3ms (1 query, 0 cached) | GC: 0.7ms)
+
+
