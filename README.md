@@ -1,6 +1,6 @@
 # Projeto G-PROD
 
-Este projeto implementa uma aplicação **Ruby on Rails** em um ambiente virtualizado utilizando **Multipass**. O objetivo é oferecer uma solução escalável e distribuída com três máquinas virtuais: Cliente, Servidor e Banco de Dados.
+Este projeto implementa uma aplicação **Ruby on Rails** em um ambiente virtualizado utilizando **Multipass**. O objetivo é oferecer uma solução escalável e distribuída com duas máquinas virtuais: Cliente-Navegador, Servidor e Banco de Dados.
 
 ## Pré-requisitos
 
@@ -24,7 +24,7 @@ Siga as instruções detalhadas no Notion para configurar as máquinas virtuais 
 
 O projeto G-PROD é composto por três VMs interconectadas, cada uma desempenhando uma função específica:
 
-1. **VM Cliente**: Exibe o front-end da aplicação e realiza as requisições.
+1. **Cliente-Navegador**: Exibe o front-end da aplicação e realiza as requisições.
 2. **VM Servidor**: Hospeda a aplicação Ruby on Rails.
 3. **VM Banco de Dados**: Armazena os dados, usando MySQL como sistema de gerenciamento.
 
