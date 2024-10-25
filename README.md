@@ -11,6 +11,7 @@ Antes de iniciar, você precisará instalar:
 - [Git](https://git-scm.com/) - Para clonar o repositório e gerenciar código.
 - [Bind9](https://www.isc.org/bind/) - Para gerenciar DNS.
 - EasyCA - Para autoridade de certificação e gerenciamento de certificados (Configurações detalhadas no [Notion](https://www.notion.so/G-Prod-1247901150778088857aef1f16d92aba?pvs=4)).
+- [Youtube](https://www.youtube.com/watch?v=GrroN2AhHNQ&t=367s) - Explicação do Projeto
   
 ## Instruções de Instalação
 
@@ -30,3 +31,4 @@ O projeto G-PROD é composto por três VMs interconectadas, cada uma desempenhan
 3. **VM Banco de Dados**: Armazena os dados, usando MySQL como sistema de gerenciamento.
 
 A aplicação estará disponível no endereço da **VM Servidor**.
+
