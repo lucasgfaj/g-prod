@@ -18,6 +18,7 @@ Siga as instruções detalhadas no Notion para configurar as máquinas virtuais 
 
 [**Instruções de Instalação no Notion**](https://www.notion.so/G-Prod-1247901150778088857aef1f16d92aba?pvs=4)
 
+
 > **Atenção**: Os IPs das VMs mostrados no Notion foram usados exclusivamente para este projeto e não são válidos para qualquer outro uso.
 
 ## Arquitetura
@@ -29,11 +30,3 @@ O projeto G-PROD é composto por três VMs interconectadas, cada uma desempenhan
 3. **VM Banco de Dados**: Armazena os dados, usando MySQL como sistema de gerenciamento.
 
 A aplicação estará disponível no endereço da **VM Servidor**.
-
-## Contribuições
-
-Contribuições são sempre bem-vindas! Se encontrar um bug ou tiver sugestões de melhorias, abra uma issue ou envie um pull request.
-
-## Licença
-
-Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
