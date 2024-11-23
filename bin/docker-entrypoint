@@ -1,0 +1,17 @@
+#!/bin/bash -e
+
+# Enable jemalloc for reduced memory usage and latency.
+if [ -z "${LD_PRELOAD+x}" ] && [ -f /usr/lib/*/libjemalloc.so.2 ]; then
+  export LD_PRELOAD="$(echo /usr/lib/*/libjemalloc.so.2)"
+fi
+
+# Prepare database if running server
+if [ "${1}" == "rails" ] && [ "${2}" == "server" ]; then
+  echo "Preparing the database..."
+  # Aqui você pode rodar a migração ou qualquer outro comando necessário
+  # Exemplo: ./bin/rails db:setup ou db:migrate
+  ./bin/rails db:prepare
+fi
+
+# Execute the default command
+exec "${@}"
