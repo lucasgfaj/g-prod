@@ -1,26 +1,27 @@
-FROM ruby:3.2-alpine
-ENV TZ=America/Sao_Paulo
+# Base image para Ruby
+FROM ruby:3.2
 
-# Instalar dependências necessárias
-RUN apk add --no-cache \
-    bash \
-    mysql-client \
-    nodejs \
-    npm
+# Instala pacotes essenciais para compilação
+RUN apt-get update -qq && apt-get install -y \
+    build-essential \
+    libssl-dev \
+    libreadline-dev \
+    zlib1g-dev \
+    libxml2-dev \
+    libffi-dev
 
-WORKDIR /var/www/g-prod
+# Configura o diretório de trabalho
+WORKDIR /app
 
-# Copiar Gemfile e Gemfile.lock primeiro para otimizar a camada do Docker
+# Copia Gemfile e Gemfile.lock
 COPY Gemfile Gemfile.lock ./
 
-# Instalar dependências do Rails (gemas)
+# Instala dependências
 RUN bundle install
 
-# Copiar o restante do código Rails
+# Copia o restante da aplicação
 COPY . .
 
-# Instalar dependências JavaScript
-RUN npm install
+# Comando padrão
+CMD ["rails", "server", "-b", "0.0.0.0"]
 
-# Comando padrão para iniciar o servidor Rails com Puma
-CMD ["./bin/rails", "server", "-b", "0.0.0.0"]
