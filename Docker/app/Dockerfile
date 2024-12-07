@@ -8,7 +8,7 @@ RUN apk add --no-cache \
     nodejs \
     npm
 
-WORKDIR /var/www/app
+WORKDIR /var/www/g-prod
 
 # Copiar o código da aplicação Rails
 COPY . .
