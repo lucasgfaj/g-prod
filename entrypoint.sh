@@ -1,10 +1,12 @@
 #!/bin/sh
 set -e
 
-echo "Running db:create..."
+# Executando db:create e db:migrate
+echo "Executando db:create..."
 bundle exec rails db:create
-echo "Running db:migrate..."
+echo "Executando db:migrate..."
 bundle exec rails db:migrate
 
-# Inicia o servidor Rails
-exec bundle exec rails server -b '0.0.0.0'
+# Continuando com a inicialização
+echo "Finalizando entrypoint..."
+exec "$@"

@@ -1,4 +1,4 @@
-FROM mysql:8.0-alpine
+FROM mysql:8.0
 
 ENV MYSQL_ROOT_PASSWORD=05092004
 ENV MYSQL_DATABASE=g_prod_development

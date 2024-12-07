@@ -1,4 +1,4 @@
-FROM ruby:3.2-alpine
+FROM ruby:3.2
 
 # Instala pacotes
 RUN apt-get update -qq && apt-get install -y \
@@ -21,11 +21,12 @@ RUN bundle install
 # Copia o restante da aplicação
 COPY . .
 
-# Copia o arquivo de configuração entrypoint
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+# Copiando o entrypoint
+COPY ./entrypoint.sh /usr/bin/entrypoint.sh
+RUN chmod +x /usr/bin/entrypoint.sh
 
+# Configurando o entrypoint
+ENTRYPOINT ["/usr/bin/entrypoint.sh"]
 
-# Comando de Inicialização
-ENTRYPOINT ["/entrypoint.sh"]
-
+# Comando principal (Rails server)
+CMD ["rails", "server", "-b", "0.0.0.0"]
