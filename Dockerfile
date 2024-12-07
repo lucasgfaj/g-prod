@@ -10,11 +10,17 @@ RUN apk add --no-cache \
 
 WORKDIR /var/www/g-prod
 
-# Copiar o código da aplicação Rails
+# Copiar Gemfile e Gemfile.lock primeiro para otimizar a camada do Docker
+COPY Gemfile Gemfile.lock ./
+
+# Instalar dependências do Rails (gemas)
+RUN bundle install
+
+# Copiar o restante do código Rails
 COPY . .
 
-# Instalar dependências do Rails
-RUN bundle install
+# Instalar dependências JavaScript
+RUN npm install
 
 # Comando padrão para iniciar o servidor Rails com Puma
 CMD ["./bin/rails", "server", "-b", "0.0.0.0"]
