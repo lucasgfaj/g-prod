@@ -4,7 +4,7 @@ services:
   db:
     build:
       context: ./docker/db
-    container_name: mysql_container
+    container_name: g-prod_db
     ports:
       - "3306:3306"
     volumes:
@@ -20,7 +20,7 @@ services:
   app:
     build:
       context: . 
-    container_name: g-prod-app
+    container_name: g-prod_app
     depends_on:
       - db
     ports:
