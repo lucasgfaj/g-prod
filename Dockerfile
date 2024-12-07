@@ -1,7 +1,6 @@
-# Base image para Ruby
-FROM ruby:3.2
+FROM ruby:3.2-alpine
 
-# Instala pacotes essenciais para compilação
+# Instala pacotes
 RUN apt-get update -qq && apt-get install -y \
     build-essential \
     libssl-dev \
@@ -10,7 +9,7 @@ RUN apt-get update -qq && apt-get install -y \
     libxml2-dev \
     libffi-dev
 
-# Configura o diretório de trabalho
+# Configura o diretór
 WORKDIR /app
 
 # Copia Gemfile e Gemfile.lock
@@ -22,6 +21,11 @@ RUN bundle install
 # Copia o restante da aplicação
 COPY . .
 
-# Comando padrão
-CMD ["rails", "server", "-b", "0.0.0.0"]
+# Copia o arquivo de configuração entrypoint
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+
+# Comando de Inicialização
+ENTRYPOINT ["/entrypoint.sh"]
 
