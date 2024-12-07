@@ -1,12 +1,13 @@
 # Projeto G-PROD
 
-Este projeto implementa uma aplicação **Ruby on Rails** em um ambiente virtualizado utilizando **Multipass**. O objetivo é oferecer uma solução escalável e distribuída com duas máquinas virtuais: Cliente-Navegador, Servidor e Banco de Dados.
+Este projeto implementa uma aplicação **Ruby on Rails** em um ambiente virtualizado utilizando **Multipass** e **Docker**. O objetivo é oferecer uma solução escalável e distribuída com duas máquinas virtuais: Cliente-Navegador, Servidor e Banco de Dados.
 
 ## Pré-requisitos
 
 Antes de iniciar, você precisará instalar:
-
+- [Grafana](https://grafana.com/) - Plataforma de análise e monitoramento de métricas em tempo real através de dashboards interativos.
 - [Multipass](https://multipass.run/) - Virtualização leve para gerenciar máquinas virtuais.
+- [Docker](https://www.docker.com/) - Plataforma para criação, implantação e execução de aplicações em contêineres.
 - [Ruby on Rails](https://rubyonrails.org/) - Framework usado para a aplicação web.
 - [Git](https://git-scm.com/) - Para clonar o repositório e gerenciar código.
 - [Bind9](https://www.isc.org/bind/) - Para gerenciar DNS.
@@ -25,7 +26,7 @@ Siga as instruções detalhadas no Notion para configurar as máquinas virtuais 
 > **Atenção**: Os IPs das VMs mostrados no Notion foram usados exclusivamente para este projeto e não são válidos para qualquer outro uso.
 
 
-## Arquitetura
+## Arquitetura MultiPass
 
 O projeto G-PROD é composto por três VMs interconectadas, cada uma desempenhando uma função específica:
 
@@ -34,4 +35,17 @@ O projeto G-PROD é composto por três VMs interconectadas, cada uma desempenhan
 3. **VM Banco de Dados**: Armazena os dados, usando MySQL como sistema de gerenciamento.
 
 A aplicação estará disponível no endereço da **VM Servidor**.
+
+## Arquitetura Docker
+
+O projeto G-PROD é composto por uma VM e dois containers interconectadas, cada uma desempenhando uma função específica:
+
+1. **Cliente-Navegador**: Exibe o front-end da aplicação e realiza as requisições.
+2. **VM Docker**: Hospeda a aplicação Ruby on Rails.
+
+A aplicação estará disponível no endereço da **VM Docker**.
+
+
+
+
 
